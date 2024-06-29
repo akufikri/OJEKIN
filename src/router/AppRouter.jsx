@@ -4,6 +4,8 @@ import Home from '../view/Home';
 import Layout from '../Layouts';
 import NotFound from '@/view/NotFound';
 import Settings from '@/view/Settings';
+import Login from '@/view/Login';
+import Register from '@/view/Register';
 
 const AppRouter = () => {
       return (
@@ -11,6 +13,8 @@ const AppRouter = () => {
                   <Layout>
                         <Routes>
                               <Route path="/" element={<Home />} />
+                              <Route path="/login" element={<Login />} />
+                              <Route path="/register" element={<Register />} />
                               <Route path="/pengaturan" element={<Settings />} />
                               <Route path="*" element={<NotFound />} />
                         </Routes>

@@ -12,7 +12,7 @@ const BottomBar = () => {
                 <BottomBarIcon icon={<FiHome size="20" />} label="Beranda" href="/" />
                 <BottomBarIcon icon={<CgNotes size="20" />} label="Pesanan" href="*" />
                 <BottomBarIcon icon={<MdOutlineChatBubbleOutline size="20" />} label="Chat" href="*" />
-                <BottomBarIcon icon={<FaRegUser size="20" />} label="Akun" href="/pengaturan" />
+                <BottomBarIcon icon={<FaRegUser size="20" />} label="Akun" href="/login" />
             </div>
         </div>
     );
