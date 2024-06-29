@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -21,9 +21,8 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`fixed top-0 w-full h-12 transition-colors duration-300 ${
-                isScrolled ? 'bg-fuchsia-300' : 'bg-transparent'
-            }`}>
+            <nav className={`fixed top-0 w-full h-12 transition-colors duration-300 ${isScrolled ? 'bg-fuchsia-300' : 'bg-transparent'
+                }`}>
                 {/* Konten navbar Anda di sini */}
             </nav>
         </>
