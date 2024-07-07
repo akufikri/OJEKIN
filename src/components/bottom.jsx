@@ -4,15 +4,22 @@ import { FiHome } from "react-icons/fi";
 import { MdOutlineChatBubbleOutline } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import { isLoggedIn } from '../utils/auth';
 
 const BottomBar = () => {
+    const userLoggedIn = isLoggedIn();
+
     return (
         <div className="max-w-md w-full h-14 bg-white border-t border-gray-200 fixed bottom-0 px-4">
             <div className="flex items-center justify-between h-full px-2">
                 <BottomBarIcon icon={<FiHome size="20" />} label="Beranda" href="/" />
                 <BottomBarIcon icon={<CgNotes size="20" />} label="Pesanan" href="*" />
                 <BottomBarIcon icon={<MdOutlineChatBubbleOutline size="20" />} label="Chat" href="*" />
-                <BottomBarIcon icon={<FaRegUser size="20" />} label="Akun" href="/login" />
+                {userLoggedIn ? (
+                    <BottomBarIcon icon={<FaRegUser size="20" />} label="Akun" href="/pengaturan" />
+                ) : (
+                    <BottomBarIcon icon={<FaRegUser size="20" />} label="Akun" href="/login" />
+                )}
             </div>
         </div>
     );

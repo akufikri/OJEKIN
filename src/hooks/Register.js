@@ -9,6 +9,7 @@ const Registration = () => {
             phone_number: '',
             role: 'user'
       });
+      const uri = 'https://backend-ojekin.vercel.app/auth/';
       const [loading, setLoading] = useState(false);
       const [error, setError] = useState(null);
       const [success, setSuccess] = useState(null); // Add success state
@@ -62,12 +63,12 @@ const Registration = () => {
 
             setLoading(true);
             setError(null);
-            setSuccess(null); // Reset success state
+            setSuccess(null);
 
             try {
-                  const response = await axios.post('https://backend-ojekin.vercel.app/auth/register', formData);
+                  const response = await axios.post(`${uri}register`, formData);
                   setLoading(false);
-                  setSuccess('Registrasi berhasil!'); // Set success message
+                  setSuccess('Registrasi berhasil!');
                   return response.data;
             } catch (error) {
                   setLoading(false);

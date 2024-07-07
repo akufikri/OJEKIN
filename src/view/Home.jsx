@@ -6,7 +6,7 @@ import { SiGooglegemini } from "react-icons/si";
 const Home = () => {
       return (
             <>
-                  <h1 className="font-semibold text-center">Mau kemana hari ini ? <Badge className="gap-1"><SiGooglegemini className='rotate-45' /> <span>Fulan Ahmad</span></Badge></h1>
+
                   <Card className="mt-5 bg-gradient-to-r from-blue-200 to-blue-300 border-0">
                         <CardContent className="h-36 flex items-center">
                               <div className="block w-56 space-y-2 mt-4">

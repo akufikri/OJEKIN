@@ -23,7 +23,6 @@ const Navbar = () => {
         <>
             <nav className={`fixed top-0 w-full h-12 transition-colors duration-300 ${isScrolled ? 'bg-fuchsia-300' : 'bg-transparent'
                 }`}>
-                {/* Konten navbar Anda di sini */}
             </nav>
         </>
     );
