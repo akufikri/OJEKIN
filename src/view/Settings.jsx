@@ -78,10 +78,14 @@ const Settings = () => {
             <section className='max-w-2xl mx-auto p-4'>
                   <Card className="bg-blue-50 mb-6">
                         <CardContent className="flex items-center pt-6 pb-6 gap-4">
-                              {profile.user.profile_picture ? (
-                                    <Avatar className="w-16 h-16">
-                                          <AvatarImage src={profile.user.profile_picture} alt={profile.user.name} />
-                                    </Avatar>
+                              {profile.user.hasOwnProperty('profile_picture') ? (
+                                    profile.user.profile_picture ? (
+                                          <Avatar className="w-16 h-16">
+                                                <AvatarImage src={profile.user.profile_picture} alt={profile.user.name} />
+                                          </Avatar>
+                                    ) : (
+                                          <FaUserCircle className='text-[60px]' />
+                                    )
                               ) : (
                                     <FaUserCircle className='text-[60px]' />
                               )}
@@ -92,6 +96,7 @@ const Settings = () => {
                               </div>
                         </CardContent>
                   </Card>
+
 
                   <Card className="mb-6">
                         <CardContent className="divide-y">
