@@ -7,12 +7,13 @@ const Registration = () => {
             email: '',
             password: '',
             phone_number: '',
+            profile_picture: '', // Kept as is, can be empty string or have content
             role: 'user'
       });
       const uri = 'https://backend-ojekin.vercel.app/auth/';
       const [loading, setLoading] = useState(false);
       const [error, setError] = useState(null);
-      const [success, setSuccess] = useState(null); // Add success state
+      const [success, setSuccess] = useState(null);
       const [validationErrors, setValidationErrors] = useState({});
 
       const validateField = (name, value) => {
@@ -33,6 +34,7 @@ const Registration = () => {
                   case 'phone_number':
                         if (value && !/^\d{10,12}$/.test(value)) return 'Nomor telepon harus 10-12 digit';
                         return '';
+                  // No validation for profile_picture, it can be empty or have content
                   default:
                         return '';
             }
